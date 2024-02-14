@@ -8,6 +8,7 @@ import { ContenidoPbComponent } from './contenido-pb/contenido-pb.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
+import { SharedDataService } from 'src/app/services/shared-data/shared-data.service';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
   },
 ];
 
+
 @NgModule({
   declarations: [
     FormularioPbComponent,
@@ -33,8 +35,9 @@ const routes: Routes = [
     AppRoutingModule,
     FormsModule,
     DataTablesModule,
-    RouterModule.forChild(routes),
+   
   ],
   exports: [ContenidoPbComponent, FormularioPbComponent],
+  providers: [SharedDataService],
 })
 export class PlazaBaseModule {}

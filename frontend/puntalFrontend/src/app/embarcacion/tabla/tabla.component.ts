@@ -33,9 +33,10 @@ export class TablaComponent implements OnInit {
   someClickHandler(index: number): void {
     const rowData = this.datos[index];
     this.sharedDataService.setData('embarcacionSeleccionada', rowData);
-    this.router.navigate(['/embarcaciones/formulario'], {
-      queryParams: { tipo: 'vista' }, // O 'vacio' según tus necesidades
-    }); // Si no es con ruta abosulta, no funciona
+    // this.router.navigate(['/embarcaciones/formulario'], {
+    //   queryParams: { tipo: 'vista' }, // O 'vacio' según tus necesidades
+    // }); 
+    this.router.navigate(['formulario'], { relativeTo: this.activatedRoute.parent, queryParams: { tipo: 'vista' } });// Si no es con ruta abosulta, no funciona
     // this.router.navigate(['../formulario'], { relativeTo: this.activatedRoute.parent });
   }
   ngOnInit(): void {

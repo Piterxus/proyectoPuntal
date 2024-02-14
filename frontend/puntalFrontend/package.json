@@ -30,6 +30,8 @@
     "datatables.net-bs5": "^1.11.3",
     "datatables.net-dt": "^1.13.8",
     "jquery": "^3.7.1",
+    "ngx-bootstrap": "^11.0.0",
+    "material": "^0.8.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
