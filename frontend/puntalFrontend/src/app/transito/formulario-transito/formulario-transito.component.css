@@ -1,14 +1,31 @@
-.formularioEmbarcaciones {
+.formularioTransitos {
     padding: 50px;
+    
 }
 
 form {
+    
     background-color: #FFFFFF;
     padding: 15px;
+}
+.tripulante
+{
+    position: relative;
+    left:px;
+}
+
+form {
+    
+    background-color: #FFFFFF;
+    padding: 20px;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
 }
-
+.autorizaciones
+{
+    margin-top: 20px;
+    margin-right: 200px;
+}
 .formLeft {
     margin-right: 100px;
 }
@@ -30,52 +47,25 @@ input {
 
 
 }
-
-input[name='nombre'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_user.svg);
-
-}
-
-input[name='matricula'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_mat.svg);
+input[name='proposito'] {
+    background-image: url(/assets/img/transitos/proposito.svg);
 
 }
 
-input[name='modelo'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_modelo.svg);
+
+input[name='fecha_entrada'],
+input[name="fecha_salida"] {
+    background-image: url(/assets/img/transitos/calendario.svg);
 
 }
 
-input[name='origen'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_band.svg);
+
+input[name='patron'] {
+    
+    background-image: url(/assets/img/transitos/patron.svg);
 
 }
 
-input[name='titular'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_tit.svg);
-
-}
-
-input[name='registro'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_reg.svg);
-
-}
-
-input[name='eslora'],
-input[name="manga"] {
-    background-image: url(/assets/img/embarcaciones/formIcon_es.svg);
-
-}
-
-input[name='tipo'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_tip.svg);
-
-}
-
-input[name='imgEmb'] {
-    background-image: url(/assets/img/embarcaciones/formIcon_img.svg);
-
-}
 
 label {
     width: 200px;

@@ -1,4 +1,4 @@
-<table   datatable [dtOptions]="dtOptions"  class="table table-hover table-custom-hover rounded-3 overflow-hidden table-striped">
+<table   datatable [dtOptions]="dtOptions"  class="table table-hover table-custom-hover rounded-3 overflow-hidden table-striped"  >
     <thead>
         <tr>
             <th [attr.colspan]="12">
@@ -7,21 +7,22 @@
         </tr>
         <tr class="cabeceraDatos text-center">
             
-        <th>Puerto</th>
-        <th>Hora entrada</th>
-        <th>Hora salida</th>
-        <th>Matricula</th>
-        <th>Titular</th>
-        <th>Tipo</th>
-        <th>Bandera</th>
-        <th>Estado</th>
-        <th></th>
+        <th class="text-center" >Puerto</th>
+        <th class="text-center" >Hora entrada</th>
+        <th class="text-center" >Hora salida</th>
+        <th class="text-center">Matricula</th>
+        <th class="text-center">Titular</th>
+        <th class="text-center">Tipo</th>
+        <th class="text-center">Bandera</th>
+        <th class="text-center">Estado</th>
+        <th> <input (click)="seleccionarTodas()" class="text-center" type="checkbox" [checked]="selectAll"></th>
 
        
         </tr>
 </thead>
     <tbody>
-        <tr *ngFor="let item of datos;let i=index" class=" text-center">
+        
+        <tr  *ngFor="let item of datos;let i=index" class=" text-center" [ngClass]="{'color-translucido': seleccionados[i]}" >
             <td>{{item.instalacion}}</td>
             <td>{{item.fecha_entrada}}</td>
             <td>{{item.fecha_salida}}</td>
@@ -30,7 +31,8 @@
             <td>{{item.proposito}}</td>
             <td>{{item.embarcacion}}</td>
             <td class="estados" >{{item.pantalan}}</td>
-            <td><input class="check" type="checkbox"></td>
+            <td><input (click)="marcar(i)" class="eliminar" type="checkbox" [checked]="seleccionados[i]" ></td>
+            
             
     
         </tr>

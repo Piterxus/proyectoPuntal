@@ -1,5 +1,12 @@
+.table-striped>tbody>tr.color-translucido>td {
+    opacity: 0.2 !important;
 
-th {
+}
+  
+
+th{
+    
+    text-align: center;
     background-color: var(--wedgewood600);
     color: var(--wedgewood50);
     /* font-weight: bold; */
@@ -42,15 +49,9 @@ th {
 }
 table
 {
-    width: 97%;
+   margin-top: 20px;
+   width: 97%;
    margin-left: 30px;
    margin-top: 40px;
    
-}
-.check{
-width: 25px;
-height: 25px;}
-.estados
-{
-    background-color: yellow;
 }

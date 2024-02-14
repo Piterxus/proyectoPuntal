@@ -7,18 +7,17 @@ import { CardIncidenciaComponent } from './card-incidencia/card-incidencia.compo
 import { RouterModule, Routes } from '@angular/router';
 import { ListaCardsComponent } from './lista-cards/lista-cards.component';
 
-
 const routes: Routes = [
   {
     path: '',
     component: ListaCardsComponent,
     children: [
-      //{ path: 'movil/card-incidencia', loadChildren: () => import('./card-incidencia/card-incidencia.component').then(m => m.CardIncidenciaComponent) },
-      // { path: 'transito', loadChildren: () => import('../transito/transito.module').then(m=> m.TransitoModule) },
+      { path: 'card-incidencia', component: CardIncidenciaComponent },
+      { path: 'card-confirmacion-transito', component: CardConfirmacionTransitoComponent },
+      { path: '', redirectTo: 'card-incidencia', pathMatch: 'full' },
     ],
   },
 ];
-
 @NgModule({
   declarations: [
     PlantillaGuardamuellesComponent,
@@ -28,7 +27,7 @@ const routes: Routes = [
     ListaCardsComponent
   ],
   imports: [
-    CommonModule, RouterModule.forChild(routes)
+    CommonModule,/* RouterModule.forChild(routes)*/
   ],
   exports:[PlantillaGuardamuellesComponent
 

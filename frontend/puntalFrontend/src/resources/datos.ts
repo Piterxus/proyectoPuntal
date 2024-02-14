@@ -164,55 +164,7 @@ export const datos = {
             sexo: 'Femenino',
             nacionalidad: 'Mexicana',
         },
-        {
-
-            numero_documento: 'DOC004',
-            nombre: 'Alejandro Fernández',
-            sexo: 'Masculino',
-            nacionalidad: 'Chilena',
-        },
-        {
-
-            numero_documento: 'DOC005',
-            nombre: 'Sofía Martín',
-            sexo: 'Femenino',
-            nacionalidad: 'Colombiana',
-        },
-        {
-
-            numero_documento: 'DOC006',
-            nombre: 'Héctor Silva',
-            sexo: 'Masculino',
-            nacionalidad: 'Uruguaya',
-        },
-        {
-
-            numero_documento: 'DOC007',
-            nombre: 'Carolina Herrera',
-            sexo: 'Femenino',
-            nacionalidad: 'Venezolana',
-        },
-        {
-
-            numero_documento: 'DOC008',
-            nombre: 'Andrés Torres',
-            sexo: 'Masculino',
-            nacionalidad: 'Ecuatoriana',
-        },
-        {
-
-            numero_documento: 'DOC009',
-            nombre: 'Luisa García',
-            sexo: 'Femenino',
-            nacionalidad: 'Peruana',
-        },
-        {
-
-            numero_documento: 'DOC010',
-            nombre: 'Diego Morales',
-            sexo: 'Masculino',
-            nacionalidad: 'Boliviana',
-        },
+      
     ],
 
     roles: [

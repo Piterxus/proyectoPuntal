@@ -7,6 +7,7 @@ import { FormularioEmbarcacionComponent } from './formulario-embarcacion/formula
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { FormdialogoemComponent } from './formdialogoem/formdialogoem.component';
 const routes: Routes = [
   {
     path: 'embarcaciones',
@@ -25,6 +26,7 @@ const routes: Routes = [
     TablaComponent,
     EmbarcacionesComponent,
     FormularioEmbarcacionComponent,
+    FormdialogoemComponent,
   ],
   imports: [
     CommonModule,

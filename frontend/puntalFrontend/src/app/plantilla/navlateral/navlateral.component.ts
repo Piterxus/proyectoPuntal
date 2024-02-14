@@ -50,11 +50,17 @@ export class NavlateralComponent {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
 
-  dashboardRoute: string = '/dashboard';
-  transitosRoute: string = '/transito/tabla-transito';
-  embarcacionRoute: string = '/embarcaciones';
-  transitos2Route: string = '/transito/tabla-transito';
-  plazasBaseRoute:string = 'plazabase/tabla-pb';
+  // dashboardRoute: string = '/dashboard';
+  // transitosRoute: string = '/transito/tabla-transito';
+  // embarcacionRoute: string = '/embarcaciones';
+  // transitos2Route: string = '/transito/tabla-transito';
+  // plazasBaseRoute:string = 'plazabase/tabla-pb';
+
+  dashboardRoute: string = 'dashboard';
+  transitosRoute: string = 'transito/tabla-transito';
+  embarcacionRoute: string = 'embarcaciones';
+  transitos2Route: string = 'transito/tabla-transito';
+  plazasBaseRoute:string = 'plazabase';
 
 
   imageUrlDashboardDesbloqueado = 'assets/img/control.svg';

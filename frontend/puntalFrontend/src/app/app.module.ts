@@ -10,6 +10,7 @@ import { NotificacionesModule } from './notificaciones/notificaciones.module';
 import { GuardiaCivilModule } from './guardia-civil/guardia-civil.module';
 import { TransitoModule } from './transito/transito.module';
 import { PlazaBaseModule } from './plaza-base/plaza-base.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,7 @@ import { PlazaBaseModule } from './plaza-base/plaza-base.module';
     GuardiaCivilModule,
     TransitoModule,
     PlazaBaseModule,
-
+    BrowserAnimationsModule,
 
   ],
 

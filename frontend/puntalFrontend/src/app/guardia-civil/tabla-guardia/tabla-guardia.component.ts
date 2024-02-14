@@ -1,6 +1,5 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, Output,EventEmitter } from '@angular/core';
 import { datos } from 'src/resources/datos';
-
 
 
 @Component({
@@ -11,15 +10,24 @@ import { datos } from 'src/resources/datos';
 export class TablaGuardiaComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   datos = datos.transitos;
+  seleccionados: boolean[] = Array(this.datos.length).fill(false);
+  selectAll: boolean = false;
+  marcar(index: number)
+  {
+    this.seleccionados[index] = !this.seleccionados[index];
+  }
+
+ seleccionarTodas(): void {
+  this.selectAll = !this.selectAll;
+  this.seleccionados.fill(this.selectAll);
+}
 constructor() { 
   console.log(this.datos);
 }
 
-
-
 ngOnInit(): void {
   this.dtOptions = {
-    pagingType: 'full_numbers',
+   
     pageLength: 10,
     processing: true,
     language: {

@@ -21,3 +21,5 @@
     --titanWhite50: #f5f6fd;
     --titanWhite900: #3f2d85;
 }
+html, body { height: 100%; }
+

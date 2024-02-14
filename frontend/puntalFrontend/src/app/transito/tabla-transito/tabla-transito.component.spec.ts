@@ -18,4 +18,5 @@ describe('TablaTransitoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
