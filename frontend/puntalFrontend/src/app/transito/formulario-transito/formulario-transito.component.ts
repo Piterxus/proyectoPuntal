@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 
 
@@ -382,34 +383,36 @@ actualizarTransito() {
 }
 //hace un cambio del estado de plaza a ocupado
 eliminarTransito() {
-  this.eliminar().subscribe(confirmado => { 
-    console.log(confirmado + "esto");
-    if (confirmado) {
-      this.apiService.putOcupadoDisponible(this.transitoSeleccionada.Transito,this.transitoSeleccionada)
-    .pipe(
-      catchError(error => {
-        console.error('Error en la solicitud:', error);
-        throw error;
-      })
-    )
-    .subscribe(
-      response => {
+  this.eliminar().pipe(
+    switchMap(confirmado => {
+      console.log(confirmado + "esto");
+      if (confirmado) {
+        return this.apiService.putOcupadoDisponible(this.transitoSeleccionada.Transito,this.transitoSeleccionada).pipe(
+          switchMap(() => this.apiService.deleteCrew(this.transitoSeleccionada.id )),
+          catchError(error => {
+            console.error('Error en la solicitud:', error);
+            throw error;
+          })
+        );
+      } else {
+        console.log('Eliminación cancelada.');
+        return of(null); // Retorna un observable de nulo si la eliminación es cancelada
+      }
+    })
+  ).subscribe(
+    response => {
+      if (response) {
         this.router.navigate(['/transito/tabla']);  
         console.log('Respuesta del servicio en el componente:', response);
         this.transitoSeleccionada = {};
-      },
-      error => {
-        console.error('Error en la solicitud:', error);
       }
-    );
-      
-    } else {
-      
-      console.log('Eliminación cancelada.');
+    },
+    error => {
+      console.error('Error en la solicitud:', error);
     }
-  });
+  );
 
-  
+
   
 }
 

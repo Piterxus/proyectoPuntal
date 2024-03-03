@@ -150,8 +150,8 @@ const routes: Routes = [
     component: PlantillaGuardamuellesComponent, 
     children: [
       { path: '', component: ListaCardsComponent },
-    /*  { path: 'card-incidencia', component: CardIncidenciaComponent },
-      { path: 'card-confirmacion-transito', component: CardConfirmacionTransitoComponent },*/
+    { path: 'card-incidencia', component: CardIncidenciaComponent },
+      { path: 'card-confirmacion-transito', component: CardConfirmacionTransitoComponent },
     ]
   },
   {
