@@ -103,7 +103,9 @@ label {
   color: var(--regentStBlue950);
   margin-left: 10px;
 }
-
+.botones-container {
+  position: relative;
+  top: 150px;  }
 .btnDelete {
   background-color: var(--gold500);
   color: var(--gold950);
