@@ -1,7 +1,7 @@
 <div class="formularioPlazaBase">
   <div *ngIf="mostrarVacio">
     <div class="formHeader">
-      <h5>ALTA PLAZA BASE</h5>
+      <h5>&nbsp;&nbsp;RESERVA DE PLAZA BASE</h5>
     </div>
 
     <form
@@ -105,7 +105,7 @@
 
   <div *ngIf="mostrarVacio === false">
     <div class="formHeader">
-      <h5>VISTA PLAZA BASE</h5>
+      <h5 >PLAZA BASE {{ plazaBSeleccionada.Plaza}} </h5>
     </div>
     <form
       id="formPlazaBaseModificar"
