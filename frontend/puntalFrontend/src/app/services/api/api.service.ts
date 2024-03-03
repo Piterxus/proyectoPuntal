@@ -238,7 +238,7 @@ getAmarresTransito(pantalanId: number): Observable<any> {
       
     });
     
-    const url = `http://127.0.0.1:8000/api/v1/tripulante/transito/${this.transitoId}>`;
+    const url = `${this.apiUrl}tripulante/transito/${this.transitoId}>`;
     console.log(url);
     return this.http.get(url);
     
@@ -337,6 +337,25 @@ getAmarresTransito(pantalanId: number): Observable<any> {
     const url = `${this.apiUrl}${entity}/${id}`;
     // Se realiza la petición DELETE a la API con la URL.
     return this.http.delete(url);
+  }
+  deleteEntityWithCause(id: any, entity: string, causa?: string): Observable<any> {
+    // URL a la API para eliminar el recurso específico
+    const url = `${this.apiUrl}${entity}/${id}`;
+
+    // Opciones de la solicitud HTTP
+    let options = {};
+    // Si se proporciona una causa, se agrega como un parámetro en el cuerpo de la solicitud
+    if (causa) {
+      options = {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        }),
+        body: { causa: causa } // Agregar la causa al cuerpo de la solicitud
+      };
+    }
+
+    // Se realiza la petición DELETE a la API con la URL y las opciones
+    return this.http.delete(url, options);
   }
 
 }

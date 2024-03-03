@@ -36,10 +36,10 @@ export class NotificacionesComponent implements OnInit {
       this.tituloModal = rowData.Titulo;
       this.cuerpoModal = rowData.Descripcion;
       this.imagenModal = rowData.Foto;
-
+      
 
     }
-
+   
   }
   // Método para cerrar el modal
   closeModal(): void {
@@ -47,7 +47,7 @@ export class NotificacionesComponent implements OnInit {
     // Si el modal existe, cierra el modal
     if (modal) {
       modal.style.display = 'none';
-
+      
     }
   }
   // Método para marcar como leída una incidencia
@@ -66,7 +66,7 @@ export class NotificacionesComponent implements OnInit {
     this.apiService.delete(this.selectedItem.id, 'incidencia')
       .subscribe(
         () => {
-
+         
           this.closeModal();
           window.location.reload();
 
@@ -75,7 +75,7 @@ export class NotificacionesComponent implements OnInit {
           console.error('Error al eliminar la incidencia:', error);
         }
       );
-
+    
   }
   // Método para inicializar el componente en la vista (obtiene todos los datos de la entidad incidencia)
   ngOnInit(): void {
@@ -97,6 +97,8 @@ export class NotificacionesComponent implements OnInit {
     }
   }
   // Método para destruir el componente
+
+
   ngOnDestroy(): void {
     // Desuscribirse de dtTrigger para evitar problemas de memoria
     this.dtTrigger.unsubscribe();
